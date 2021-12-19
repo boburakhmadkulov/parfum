@@ -199,6 +199,29 @@ header{
                 width: 100%;
                 border: 8px solid $primaryColor;
             }
+            .owl-dots{
+                display: block;
+                position: absolute;
+                left: 50%;
+                bottom: 10px;
+                transform: translateX(-50%);
+                button {
+                    width: 20px;
+                    transition: .3s all ease;
+                    height: 5px;
+                    background: #fff;
+                    margin-right: 18px;
+                    border: none;
+                    box-shadow: 0 10px 30px #000;
+                    cursor: pointer;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    &.active {
+                        background: $primaryColor;
+                    }
+                }
+            }
             .img-block{
                 width: 100%;
                 height: 100%;
@@ -1280,9 +1303,40 @@ footer{
 @media (min-width: 1400px) {.container {max-width: 1320px;}}
 
 
+
+@media (max-width: 1400px){
+    .header-section .header-section-main .header-section-left h1{
+        font-size: 44px;
+        line-height: 52px;
+    }
+    .header-section .header-section-main .header-section-left .header-section-btns{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        a{
+            width: 49%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 22px 0;
+            white-space: nowrap;
+        }
+    }
+    .about-me-section .about-right p{
+        font-size: 16px;
+        line-height: 24px;
+        position: relative;
+        z-index: 10;
+        background: #fff;
+    }
+}
 @media (max-width: 700px){
     .modal .modal-success img{
         width: 150px;
+    }
+    .header-section .header-section-main .header-section-right .owl-dots{
+        bottom: auto;
+        top: 100%;
     }
     .marketing-support-section .marketing-support-content {
         position: relative;
@@ -1727,31 +1781,5 @@ footer{
         padding: 0;
         text-align: center;
         margin-bottom: 30px;
-    }
-}
-@media (max-width: 1400px){
-    .header-section .header-section-main .header-section-left h1{
-        font-size: 44px;
-        line-height: 52px;
-    }
-    .header-section .header-section-main .header-section-left .header-section-btns{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        a{
-            width: 49%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 22px 0;
-            white-space: nowrap;
-        }
-    }
-    .about-me-section .about-right p{
-        font-size: 16px;
-        line-height: 24px;
-        position: relative;
-        z-index: 10;
-        background: #fff;
     }
 }

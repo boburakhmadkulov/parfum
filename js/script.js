@@ -121,4 +121,12 @@ $(document).ready(function () {
         });
     }
 
+    $(".header-btn-pri").click(function() {
+        if ($('body').attr('style')) {
+            $('body').removeAttr('style');
+        } else {
+            $('body').attr('style', `overflow: hidden; padding-right: 0px;" data-scroll-lock-saved-overflow-y-property="visible" data-scroll-lock-saved-inline-overflow-property="" data-scroll-lock-saved-inline-overflow-y-property="" data-scroll-lock-locked="true" data-scroll-lock-filled-gap="true" data-scroll-lock-current-fill-gap-method="padding`);
+        }
+    });
+
 });
