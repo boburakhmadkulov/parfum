@@ -13,8 +13,6 @@ $(document).ready(function () {
         $('.overlay1').toggleClass('active');
     });
 
-    
-
     $('.mob-down-btn').on('click',function(e){
         e.preventDefault();
         $('.about-me-section .about-right').toggleClass('active');
@@ -57,6 +55,32 @@ $(document).ready(function () {
     if($(window).width() < 700) {
         $('.marketing-support-content').owlCarousel({
             loop:false,
+            margin:10,
+            nav:false,
+            dots:true,
+            center: false,
+            smartSpeed:900,
+            items:1,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:1,
+                },
+                1000:{
+                    items:1,
+                },
+                1400:{
+                    items:1,
+                }
+            }
+        });
+    };
+
+    if($(window).width() < 700) {
+        $('.terms-trade-content').owlCarousel({
+            loop:true,
             margin:10,
             nav:false,
             dots:true,
