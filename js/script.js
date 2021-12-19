@@ -80,6 +80,31 @@ $(document).ready(function () {
         });
     };
 
+    $('.imag-block').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:false,
+        dots:true,
+        center: false,
+        smartSpeed:900,
+        items:1,
+        responsive:{
+            0:{
+                items:1,
+            },
+            600:{
+                items:1,
+            },
+            1000:{
+                items:1,
+            },
+            1400:{
+                items:1,
+            }
+        }
+    });
+    
+
     if($(window).width() < 700) {
         $('.header-section .header-section-main .header-section-left .header-section-btns .header-btn-pri').text('Получить подробную информацию');
     }
@@ -120,13 +145,5 @@ $(document).ready(function () {
             }
         });
     }
-
-//     $(".header-btn-pri").click(function() {
-//         if ($('body').attr('style')) {
-//             $('body').removeAttr('style');
-//         } else {
-//             $('body').attr('style', `overflow: hidden; padding-right: 0px;" data-scroll-lock-saved-overflow-y-property="visible" data-scroll-lock-saved-inline-overflow-property="" data-scroll-lock-saved-inline-overflow-y-property="" data-scroll-lock-locked="true" data-scroll-lock-filled-gap="true" data-scroll-lock-current-fill-gap-method="padding`);
-//         }
-//     });
 
 });
